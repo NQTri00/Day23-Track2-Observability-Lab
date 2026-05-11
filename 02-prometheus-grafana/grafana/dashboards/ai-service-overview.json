@@ -71,6 +71,25 @@
       "datasource": {"type": "prometheus", "uid": "prometheus"},
       "targets": [{"expr": "inference_active_gauge", "refId": "A"}],
       "fieldConfig": {"defaults": {"unit": "short"}}
+    },
+    {
+      "type": "row", "title": "Cross-Day Integration (Days 19-20)",
+      "id": 7, "gridPos": {"x": 0, "y": 14, "w": 24, "h": 1},
+      "collapsed": false
+    },
+    {
+      "type": "timeseries", "title": "Day 19: Vector Store Collections (Stub)",
+      "id": 8, "gridPos": {"x": 0, "y": 15, "w": 12, "h": 8},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "targets": [{"expr": "day19_qdrant_collections", "refId": "A"}],
+      "fieldConfig": {"defaults": {"unit": "short"}}
+    },
+    {
+      "type": "timeseries", "title": "Day 20: Model Serving Throughput (Stub)",
+      "id": 9, "gridPos": {"x": 12, "y": 15, "w": 12, "h": 8},
+      "datasource": {"type": "prometheus", "uid": "prometheus"},
+      "targets": [{"expr": "rate(day20_llamacpp_tokens_total[1m])", "refId": "A"}],
+      "fieldConfig": {"defaults": {"unit": "ops"}}
     }
   ]
 }
